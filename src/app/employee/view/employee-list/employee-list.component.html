@@ -1,0 +1,19 @@
+<div id="container">
+      <div id="content">
+             <table>
+               <tr *ngFor="let employeesdatas of employeesdata; let i = index">
+                  <td width="5%">{{i+1}}</td> 
+                  <td width="25%" style="text-align: left;">{{employeesdatas.name}}</td>
+                  <td width="5%" style="text-align: left;">{{employeesdatas.employeeCode}}</td>
+                  <td width="10%" style="text-align: left;">{{employeesdatas.age}}</td>
+                  <td width="10%" style="text-align: left;">{{employeesdatas.salary}}</td>
+                  <td width="15%" style="text-align: right;"> 
+                        <a (click)="deleteEmployee(employeesdatas.id)" >Delete</a> / <a (click)="editEmployee(employeesdatas.id)" >Edit</a>                        
+                  </td>
+               </tr>
+               <tr><td colspan="7">
+                  <button class="button" (click)="redirectToAddEmployee()"><span>Add Employee</span></button>
+               </td></tr>
+            </table>          
+         </div>
+</div>
